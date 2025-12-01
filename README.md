@@ -1,6 +1,10 @@
-# Two Spaces Indent Plugin
+# Two Spaces Indent - Obsidian Plugin
 
-A plugin for Obsidian that provides functionality for increasing and decreasing text indentation using 2 spaces per level.
+An [Obsidian] plugin that provides functionality for increasing and decreasing text indentation using 2 spaces per level.
+
+## The Problem
+
+As of 2025 December, obsidian is hardcoded to use 4 spaces per indent level. This is not ideal for many cases. This plugin act as a quick fix to this problem until obsidian implements a proper solution.
 
 ## Features
 
@@ -14,7 +18,7 @@ A plugin for Obsidian that provides functionality for increasing and decreasing 
 
 ## Installation
 
-1. Download the latest release from the [releases page](https://github.com/hoishing/obsidian-two-spaces-indent/releases)
+1. Download the latest release from the [releases page](https://github.com/hoishing/two-spaces-indent-obsidian/releases)
 2. Extract the files to your Obsidian vault's `.obsidian/plugins/` directory
 3. Reload Obsidian (or restart the app)
 4. Enable the plugin in Settings > Community plugins
@@ -118,3 +122,4 @@ MIT License - see LICENSE file for details.
 
 [Github issue]: https://github.com/hoishing/two-spaces-indent/issues
 [LinkedIn]: https://www.linkedin.com/in/kng2
+[Obsidian]: https://obsidian.md

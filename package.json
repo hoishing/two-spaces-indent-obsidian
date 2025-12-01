@@ -1,6 +1,6 @@
 {
   "name": "obsidian-two-spaces-indent",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A plugin for increasing and decreasing text indentation using 2 spaces per level.",
   "main": "main.js",
   "scripts": {
@@ -8,7 +8,11 @@
     "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
     "version": "node version-bump.mjs"
   },
-  "keywords": ["obsidian", "plugin", "indentation"],
+  "keywords": [
+    "obsidian",
+    "plugin",
+    "indentation"
+  ],
   "author": "Your Name",
   "license": "MIT",
   "devDependencies": {
