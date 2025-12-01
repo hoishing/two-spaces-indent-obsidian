@@ -1,0 +1,11 @@
+{
+	"id": "two-spaces-indent",
+	"name": "Two Spaces Indent",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "A plugin for increasing and decreasing text indentation using 2 spaces per level.",
+	"author": "Your Name",
+	"authorUrl": "",
+	"fundingUrl": "",
+	"isDesktopOnly": false
+}
