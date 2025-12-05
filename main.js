@@ -37,14 +37,14 @@ var TwoSpacesIndentPlugin = class extends import_obsidian.Plugin {
     await this.loadSettings();
     this.addCommand({
       id: "increase-indent",
-      name: "Increase Indent",
+      name: "Increase indent",
       editorCallback: (editor, view) => {
         this.increaseIndent(editor);
       }
     });
     this.addCommand({
       id: "decrease-indent",
-      name: "Decrease Indent",
+      name: "Decrease indent",
       editorCallback: (editor, view) => {
         this.decreaseIndent(editor);
       }
@@ -157,13 +157,15 @@ var TwoSpacesIndentSettingTab = class extends import_obsidian.PluginSettingTab {
   display() {
     const { containerEl } = this;
     containerEl.empty();
-    containerEl.createEl("h2", { text: "Two Spaces Indent Settings" });
-    containerEl.createEl("p", {
-      text: `Hotkeys can be customized in Obsidian's Hotkeys settings. Search for "Increase Indent" and "Decrease Indent" commands.`
-    });
-    new import_obsidian.Setting(containerEl).setName("Maximum Indent Levels").setDesc("Maximum number of indent levels allowed (default: 10)").addSlider((slider) => slider.setLimits(1, 20, 1).setValue(this.plugin.settings.maxIndentLevels).setDynamicTooltip().onChange(async (value) => {
-      this.plugin.settings.maxIndentLevels = value;
-      await this.plugin.saveSettings();
-    }));
+    new import_obsidian.Setting(containerEl).setName("Two spaces indent settings").setHeading();
+    new import_obsidian.Setting(containerEl).setName("Hotkeys").setDesc(
+      `Hotkeys can be customized in Obsidian's Hotkeys settings. Search for "Increase indent" and "Decrease indent" commands.`
+    );
+    new import_obsidian.Setting(containerEl).setName("Maximum indent levels").setDesc("Maximum number of indent levels allowed (default: 10)").addSlider(
+      (slider) => slider.setLimits(1, 20, 1).setValue(this.plugin.settings.maxIndentLevels).setDynamicTooltip().onChange(async (value) => {
+        this.plugin.settings.maxIndentLevels = value;
+        await this.plugin.saveSettings();
+      })
+    );
   }
 };
